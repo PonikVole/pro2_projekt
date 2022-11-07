@@ -11,7 +11,7 @@ public class Message {
     public static final String AUTHOR_SYSTEM = "System";
     @Expose(serialize = true, deserialize = true)
     private String author, text;
-    @Expose(serialize = false, deserialize = false)
+    @Expose(serialize = true, deserialize = true)
     private LocalDateTime created;
 
     public Message(String author, String text) {
