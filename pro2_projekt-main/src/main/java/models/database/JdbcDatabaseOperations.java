@@ -31,8 +31,9 @@ public class JdbcDatabaseOperations implements DatabaseOperations{
         }
     }
 
+
     @Override
-    public List<Message> getMessages() {
+    public List<Message> getMessages() {    //TODO máme dodělat my
         return null;
     }
 }

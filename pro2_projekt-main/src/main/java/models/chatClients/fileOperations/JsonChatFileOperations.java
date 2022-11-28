@@ -71,19 +71,3 @@ public class JsonChatFileOperations implements ChatFileOperations{
 
 }
 
-class LocalDateTimeSerializer implements JsonSerializer<LocalDateTime> {
-    private static final DateTimeFormatter formatter =
-            DateTimeFormatter.ofPattern("yyyy-MM-dd:mm:ss");
-    @Override
-    public JsonElement serialize(LocalDateTime localDateTime, Type type, JsonSerializationContext jsonSerializationContext) {
-        return new JsonPrimitive(formatter.format(localDateTime));
-    }
-}
-
-class LocalDateTimeDeserializer implements JsonDeserializer<LocalDateTime>{
-    @Override
-    public LocalDateTime deserialize(JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext) throws JsonParseException {
-        return LocalDateTime.parse(jsonElement.getAsString(),
-                DateTimeFormatter.ofPattern("yyyy-MM-dd:mm:ss"));
-    }
-}

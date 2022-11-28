@@ -44,7 +44,7 @@ public class Message {
 
     @Override
     public String toString() {
-        if (author.equals(AUTHOR_SYSTEM))
+        if (author.toUpperCase().equals(AUTHOR_SYSTEM.toUpperCase()))
             return text + "\n";
         String s = author + " ["+ created +"]\n";
         s += text+"\n";
